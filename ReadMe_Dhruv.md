@@ -16,7 +16,10 @@
 ##Command
 docker build -t myjsonapp .
 
-Running Flask Dockerized App:
+#Running Flask Dockerized App:
 
 ##Command
-docker run -p 5000:5000 myjsonapp
+docker run -p 5001:5000 myjsonapp
+
+
+//updated port to 5001 becuz when used in mac 5000 is used already by default apply application so not good to kill that process.
