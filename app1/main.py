@@ -28,4 +28,4 @@ def open_file():
     with open('fcc.json', 'r') as fcc_file:
         fcc_data = json.load(fcc_file)
         #print(fcc_data)
-        return (fcc_data)
+        return str(fcc_data)
