@@ -1,19 +1,15 @@
 from flask import Flask
 from datetime import date
-import json
+import requests
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello, World!, this is app 2"
+    r = requests.get('http://python_app1:5000/')
+    r=r.json()
+    rev_data = dict(reversed(list(r.items())))
+    return str(rev_data)
     
-@app.route('/rev')
-def open_file():
-    with open('/app/fcc.json', 'r') as fcc_file:
-        fcc_data = json.load(fcc_file)
-        rev_data = dict(reversed(list(fcc_data.items())))
-        return str(rev_data)
-
 if __name__ == "__main__":
     app.run(debug=True)

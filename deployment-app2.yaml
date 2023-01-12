@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2-deployment
+  labels:
+    app: python-app2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-app2
+  template:
+    metadata:
+      labels:
+        app: python-app2
+    spec:
+      containers:
+      - name: python-app2-pod
+        image: dhruvohra23/myjsonapp2:v1
+        ports:
+        - containerPort: 5000

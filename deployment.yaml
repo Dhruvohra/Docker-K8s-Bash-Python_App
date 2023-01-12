@@ -18,4 +18,4 @@ spec:
       - name: python-app1-pod
         image: dhruvohra23/myjsonapp:v1
         ports:
-        - containerPort: 5001
+        - containerPort: 5000

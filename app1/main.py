@@ -6,26 +6,37 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello, World!"
-    
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
-# Json Parsing
-@app.route('/date')
-def get_current_date():
-	favorite_pizza = {
+	my_json = {
 		"John": "Pepperoni",
 		"Mary": "Cheese",
 		"Tim": "Mushroom"
 	}
-	return favorite_pizza
-	#return {"Date": date.today()}
+	return my_json
 
-@app.route('/file')
-def open_file():
-    with open('fcc.json', 'r') as fcc_file:
-        fcc_data = json.load(fcc_file)
-        #print(fcc_data)
-        return str(fcc_data)
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+# @app.route("/")
+# def home():
+#     return "Hello, World!"
+    
+# # Json Parsing
+# @app.route('/json')
+# def get_current_date():
+# 	favorite_pizza = {
+# 		"John": "Pepperoni",
+# 		"Mary": "Cheese",
+# 		"Tim": "Mushroom"
+# 	}
+# 	return favorite_pizza
+# 	#return {"Date": date.today()}
+
+
+
+# @app.route('/file')
+# def open_file():
+#     with open('fcc.json', 'r') as fcc_file:
+#         fcc_data = json.load(fcc_file)
+#         #print(fcc_data)
+#         return str(fcc_data)
