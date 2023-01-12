@@ -6,7 +6,7 @@ spec:
     ports:
     - name: python-app2-service
       targetPort: 5000
-      port: 5200
+      port: 5201
       nodePort: 30276
       protocol: TCP
     selector:
