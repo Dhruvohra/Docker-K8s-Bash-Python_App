@@ -53,3 +53,5 @@ kubectl version -o json
 # Start Minikube
 
 minikube start
+
+minikube status
