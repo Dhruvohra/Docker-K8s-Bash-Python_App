@@ -2,7 +2,7 @@
 
 ## Step-1) Cloned the repository
 
-## Step-2) cd /foldername
+## Step-2) cd shell_scripts
 
 Note: before executing Step-3) script.sh ensure you have pre-requisites installed on the host machine to run the Project i.e
 
@@ -18,7 +18,7 @@ If you haven't installed them yet execute pre-requisite.sh script by:
 Command: chmod 777 pre-requisite.sh
 Command: ./pre-requisite.sh
 
-Note: You have to accept certain agreements it ask for say click on yes or press y and enter.
+Note: You have to accept certain agreements it may ask to click on yes or press y and enter.
 
 ## Step-3) chmod 777 script.sh
 
