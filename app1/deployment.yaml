@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: python-app1-pod
-        image: dhruvohra23/myjsonapp:v2
+        image: myjsonapp:v1
+        imagePullPolicy: "Never"
         ports:
         - containerPort: 5000

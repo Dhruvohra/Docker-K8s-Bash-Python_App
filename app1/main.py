@@ -13,12 +13,11 @@ def home():
 	}
 	return my_json
 
+@app.route('/file')
+def open_file():
+     with open('fcc.json', 'r') as fcc_file:
+         fcc_data = json.load(fcc_file)
+         return fcc_data
+
 if __name__ == "__main__":
     app.run(debug=True)
-
-# @app.route('/file')
-# def open_file():
-#     with open('fcc.json', 'r') as fcc_file:
-#         fcc_data = json.load(fcc_file)
-#         #print(fcc_data)
-#         return str(fcc_data)
