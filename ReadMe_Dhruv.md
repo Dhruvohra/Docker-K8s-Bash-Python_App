@@ -1,6 +1,6 @@
 # How to Run this Project
 
-## Step-1) Cloned the repository
+## Step-1) Clone the repository
 
 ## Step-2) cd coding-challenge-dhruv-vohra
 ## cd shell_scripts
@@ -19,7 +19,7 @@ If you haven't installed them yet execute pre-requisite.sh script by:
 Command: chmod 777 pre-requisite.sh
 Command: ./pre-requisite.sh
 
-Note: You have to accept certain agreements it may ask to click on yes or press y and enter.
+Note: You have to accept certain agreements it may ask to click on yes (press tab and enter will also work) or press y and enter at some stages.
 
 ## Step-3) chmod 777 script.sh
 
@@ -87,7 +87,21 @@ Additional Steps: If wanted to check for cluster Ip Ports on host machine these 
 
 ### Docker-compose.yaml:
 
-Additional file created to run the applications without minikube k8s so through this we can create the working applications using docker only. Would need to ust change the app endpoints to run the app from this file.
+Additional file created to run the applications without minikube k8s so through this we can create the working applications using docker only. 
+
+Now be in the folder where docker-compose.yaml exists and then type command:
+
+docker-compose.yaml up -d
+
+This will start 2-apps and will render respective json data.
+
+Accessible at:
+
+APP1: http://localhost:5111
+App1_file:  http://localhost:5111/file
+APP2: http://localhost:5222
+APP2_file: http://localhost:5222/rev
+
 
 ### script.sh Automatic bash script to execute both the applications inside minikube k8s using docker.
 
