@@ -15,10 +15,8 @@ def home():
 def json():
     s = requests.get('http://json-python-svc:5200/file')
     s=s.json()
-    rev_data2 = dict(reversed(list(s.keys())))
+    rev_data2 = dict(reversed(list(s.items())))
     return str(rev_data2)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
-
