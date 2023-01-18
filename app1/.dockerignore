@@ -1,0 +1,6 @@
+*.yaml
+
+Dockerfile
+
+# cache folder
+__pycache__
