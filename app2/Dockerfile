@@ -4,6 +4,10 @@ FROM python:3.9-slim-buster
 #created a folder into docker filesystem
 WORKDIR /app2
 
+COPY ./requirements.txt /app2
+
+RUN pip install -r requirements.txt
+
 #create group and user
 RUN groupadd -r dev_user && useradd -g dev_user dev_user
 
@@ -12,10 +16,6 @@ RUN chown -R dev_user:dev_user /app2
 
 #switch to user
 USER dev_user
-
-COPY ./requirements.txt /app2
-
-RUN pip install -r requirements.txt
 
 COPY . .
 
